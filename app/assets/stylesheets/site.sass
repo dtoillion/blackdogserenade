@@ -2,10 +2,36 @@
   background-size: cover
   background-image: asset-url('bds-dog-banner.jpg')
   height: 450px
-  h1
-    color: $black
+
+html
+  font-family: 'Noto Sans', sans-serif
+  font-size: 150%
+  color: $white
+  a, h1
+    font-weight: 700
+  p
+    font-weight: 400
+  h1, p
+    color: $white
+
+a
+  color: $accent
+  &:hover
+    color: $accent
+
+.header,
+.contents,
+.footer
+  background: $black
+
+.footer
+  text-align: right
+
 img
   width: 100%
   max-width: 100%
   margin: 0 auto
 
+@media screen and (max-width: 860px)
+  .row.hero
+    height: 180px

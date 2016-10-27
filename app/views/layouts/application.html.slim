@@ -9,6 +9,5 @@ html
     = favicon_link_tag 'favicon.ico'
 
   body
-    / = render 'layouts/header'
-    .contents= yield
-    = render 'layouts/footer'
+    .contents.padded
+      = yield
