@@ -1,7 +1,7 @@
 .row.hero
   background-size: cover
   background-image: asset-url('bds-dog-banner.jpg')
-  height: 450px
+  height: 400px
 
 html
   font-family: 'Noto Sans', sans-serif
@@ -13,6 +13,9 @@ html
     font-weight: 400
   h1, p
     color: $white
+  .hero
+    h1, p
+      color: $black
 
 a
   color: $accent
@@ -20,7 +23,15 @@ a
     color: $accent
 
 .section
-  width: 100%
+  width: 90%
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+.footer
+  text-align: center
+  flex-direction: column
+  align-items: center
 
 .header,
 .contents,
@@ -34,7 +45,3 @@ img
   width: 100%
   max-width: 100%
   margin: 0 auto
-
-@media screen and (max-width: 860px)
-  .row.hero
-    height: 180px
