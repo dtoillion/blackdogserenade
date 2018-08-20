@@ -1,5 +1,81 @@
-@import vital/sprockets
-@import vital/all
+@import 'vital/sprockets'
+@import 'vital/all'
 @import site_colors
-@import site
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700')
+
+.header,
+.header nav ul li,
+.header nav ul li a,
+.header nav a:hover,
+.header .logo,
+.header .logo:hover i,
+#menu-toggle,
+#menu-toggle:checked,
+#menu-toggle:checked:before,
+#menu-toggle:hover
+  color: $accent
+  background: $black
+
+.contents,
+.header,
+.footer
+  background-color: $black
+
+.header
+  nav
+    border: none
+  h1
+    color: $white
+    text-align: center
+    padding: 0 30px
+  .menu a
+    color: $white
+
+.contents
+  min-height: 40em
+  p
+    color: $white
+  iframe
+    margin: 30px
+
+.hero
+  background-size: cover
+  background-image: asset-url('bds-dog-banner.jpg')
+  border: none
+  min-height: 450px
+  display: flex
+  h1
+    font-size: 3em
+    font-weight: 600
+  p
+    font-weight: 500
+  a
+    color: $white
+  .section
+    align-self: center
+
+.footer
+  border-top: 2px dashed $accent
+  .social_links a
+    opacity: 1
+    background: $accent
+    color: $black
+    font-weight: 700
+    font-size: 0.7em
+    line-height: 1.2
+    padding: 3px 5px
+    margin-right: 10px
+    margin-bottom: 10px
+    &:hover
+      color: $black
+      opacity: 0.7
+
+@media screen and (max-width: 860px)
+  .header nav a
+    border-top: 2px dashed $green
+    border-bottom: none
+    &.logo
+      border-top: none
+
+  .section.narrow
+    max-width: none
